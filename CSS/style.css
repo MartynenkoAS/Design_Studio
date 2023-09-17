@@ -470,7 +470,7 @@ h3 {
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
   @media screen and (max-width: 375px) {
     width: 270px;
-    margin-left: 0;
+    margin-left: -1px;
     top: 170px;
     left: 0;
   }
@@ -715,7 +715,7 @@ h3 {
   }
 }
 .main__Fantasiesblock_foto-mobile {
-  @media screen and (min-width: 376px) {
+  @media screen and (max-width: 375px) {
     display: block;
   }
   @media screen and (min-width: 376px) {
