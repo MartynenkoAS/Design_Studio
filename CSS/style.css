@@ -300,6 +300,11 @@ h3 {
     width: 100%;
   }
 }
+@media screen and (max-width: 375px) {
+.main__broadcast-text_mob-hidden {
+  display: none;
+}
+}
 .main__submit {
   display: flex;
   flex-direction: row;
@@ -462,7 +467,7 @@ h3 {
   margin: 25px 29px 49px 34px;
   position: absolute;
   top: 265px;
-  box-shadow: 10px 10px 30px 2px #e5e4e4;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
   @media screen and (max-width: 375px) {
     width: 270px;
     margin-left: 0;
@@ -492,6 +497,7 @@ h3 {
   font-weight: 400;
   text-transform: uppercase;
   background-color: #E3B873;
+  box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.30);
   color: #FFFFFF;
   width: 228px;
   height: 37px;
@@ -624,6 +630,9 @@ h3 {
   align-items: center;
   align-content: end;
   position: relative;
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
 }
 .main__1234_block_pig p {
   font-family: "Nunito Sans", sans-serif;
@@ -653,7 +662,7 @@ h3 {
   width: 100%;
   height: 864px;
   position: absolute;
-  top: 4650px;
+  top: 4610px;
   left: 0px;
   z-index: -1;
 }
@@ -661,6 +670,10 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 376px) {
+    flex-direction: column;
+    margin-top: 175px;
+  }
 }
 .main__Fantasiesblock_menu {
   display: flex;
@@ -686,9 +699,30 @@ h3 {
   width: fit-content;
 }
 .main__Fantasiesblock_menu-head {
+  color: #E3B873;
+  font-family: Yeseva One;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138.6%; /* 37.422px */
+  text-transform: uppercase;
   margin: 160px 0 47px;
-  line-height: 1.3;
+  @media screen and (max-width: 376px) {
+    font-size: 22px;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto 24px auto;
+  }
 }
+.main__Fantasiesblock_foto-mobile {
+  @media screen and (min-width: 376px) {
+    display: block;
+  }
+  @media screen and (min-width: 376px) {
+    display: none;
+  }
+}
+
 .main__Fantasiesblock_foto {
   display: flex;
   flex-direction: row;
@@ -704,10 +738,20 @@ h3 {
 .main__Fantasiesblock_foto div:last-child {
   margin-top: -70px;
 }
+
+@media screen and (max-width: 375px) {
+  .body__Fantasiesblock_backimg, .main__Fantasiesblock_menu ul, .main__Fantasiesblock_foto, .main_h3-icon_mobile {
+  display: none;
+  }
+}
+
 .main__ourclientsblock {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
 }
 .main__ourclientsblock_articles {
   display: grid;
@@ -715,7 +759,7 @@ h3 {
   grid-template-rows: 96px auto;
   width: 376px;
   height: 428px;
-  box-shadow: 10px 10px 30px 2px #e5e4e4;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03);
   position: relative;
 }
 .main__ourclientsblock_articles-name {
@@ -762,9 +806,8 @@ h3 {
   height: 54px;
   color: #FFFFFF;
   background-color: #E3B873;
+  box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.30);
   align-items: center;
-  /* padding: 10px; */
-  /* gap: 12px; */
   justify-content: space-evenly;
 }
 .main__ourclientsblock_articles-footer div:first-child {
@@ -802,6 +845,24 @@ h3 {
   width: 100%;
   z-index: -1;
 }
+
+@media screen and (min-width: 376px) and (max-width: 2500px) {
+  .body__footerblock_mobile-blackback {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .body__footerblock_mobile-blackback {
+    display: block;
+    background-color: #131313;
+    width: 100%;
+    position: absolute;
+    top: 4165px;
+    height: 1200px;
+    z-index: -1;
+  }
+}
+
 .main__footerblock-questions {
   display: flex;
   flex-direction: column;
@@ -810,22 +871,45 @@ h3 {
   height: 446px;
   background-color: #131313;
   margin: 132px auto 0 auto;
+  @media screen and (max-width: 375px) {
+    width: 100%;
+    height: 520px;
+    margin: 52px 0;
+  }
 }
 .main__footerblock-questions h3 {
   margin: 35px;
+  @media screen and (max-width: 375px) {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
 }
 .main__footerblock-questions_name-phone {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 520px;
+  @media screen and (max-width: 375px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .main__footerblock-questions_name-phone div {
   width: 231px;
+  @media screen and (max-width: 375px) {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
 }
 .main__footerblock-questions_question {
   width: 520px;
   margin-top: 49px;
+  @media screen and (max-width: 375px) {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 .main__agree-checkbox_footer {
   color: #FFFFFF;
@@ -844,6 +928,10 @@ h3 {
   text-align: center;
   line-height: 1.38;
   margin: 52px auto 26px auto;
+  @media screen and (max-width: 375px) {
+  font-size: 18px;
+  margin-top: 250px;
+  }
 }
 .main__footerblock-map img {
   width: fit-content;
@@ -855,4 +943,22 @@ h3 {
   gap: 15px;
   width: 71px;
   margin: 0 auto 43px auto;
+}
+.main__footerblock-map-img {
+  object-fit: cover;
+  width: 925px;
+  height: 465px;
+  margin-left: 13%;
+  @media screen and (max-width: 375px) {
+    width: 340px;
+    height: 255px;
+    position: absolute;
+    top: 4890px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .body__footer_town, .body__home_footer_backimg, .body__home_footer_backimg-cover {
+  display: none;
+  }
 }
