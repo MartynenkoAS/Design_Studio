@@ -132,7 +132,6 @@ h1 {
   transform: translate(2px, 4px);
 }
 .main__secondpart {
-  /* color: #FFFFFF; */
   display: flex;
   flex-direction: row;
   margin: 315px 0 0 40px;
@@ -704,7 +703,7 @@ h3 {
   font-size: 27px;
   font-style: normal;
   font-weight: 400;
-  line-height: 138.6%; /* 37.422px */
+  line-height: 138.6%; 
   text-transform: uppercase;
   margin: 160px 0 47px;
   @media screen and (max-width: 376px) {
