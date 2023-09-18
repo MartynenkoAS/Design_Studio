@@ -602,7 +602,7 @@ h3 {
 .main__submit_element_1234 {
   width: 100%;
   background-color: #131313;
-  color: #FFFFFF;
+  color: red;
   border-bottom: solid 1px rgb(100%, 100%, 100%, 0.15);
   padding-left: 0;
 }
@@ -613,7 +613,7 @@ h3 {
   width: 213px;
   height: 51px;
   align-self: end;
-  margin-right: 49px;
+  margin: 20px 49px 0 0;
   cursor: pointer;
 }
 .main__agree-checkbox_1234 {
