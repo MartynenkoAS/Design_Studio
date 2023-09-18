@@ -333,7 +333,7 @@ h3 {
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #363636;
+  color: #131313;
   width: 231px;
   height: 26px;
   border: none;
@@ -602,6 +602,7 @@ h3 {
 .main__submit_element_1234 {
   width: 100%;
   background-color: #131313;
+  color: #FFFFFF;
   border-bottom: solid 1px rgb(100%, 100%, 100%, 0.15);
   padding-left: 0;
 }
