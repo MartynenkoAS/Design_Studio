@@ -156,7 +156,7 @@ h1 {
   font-weight: 400;
   color: #E3B873;
   text-transform: uppercase;
-  width: 253px;
+  width: 220px;
   height: 66px;
   margin-top: 50px;
   letter-spacing: -7%;
@@ -166,6 +166,11 @@ h1 {
     margin: 0 auto;
   }
 }
+/* .main__secondpart_info-header_stripe {
+  width: 92px;
+  height: 1px;
+  background-color: #E3B873;
+} */
 .main__secondpart_info-text {
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
@@ -188,7 +193,7 @@ h1 {
   flex-wrap: wrap;
   width: 400px;
   height: 160px;
-  gap: 30px;
+  gap: 50px;
   @media screen and (max-width: 375px) {
     width: 100%;
   }
@@ -198,6 +203,7 @@ h1 {
   font-size: 18px;
   font-weight: 400;
   color: #E3B873;
+  width: 175px;
   text-transform: uppercase;
   margin-bottom: 9px;
   @media screen and (max-width: 375px) {
@@ -209,8 +215,9 @@ h1 {
   font-size: 13px;
   font-weight: 400;
   color: #FFFFFF;
-  width: 129px;
+  width: 100px;
   height: 42px;
+  flex-shrink: 0;
   line-height: 1.5;
   @media screen and (max-width: 375px) {
     font-size: 11px;
@@ -230,19 +237,29 @@ h1 {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 60px;
+  cursor: pointer;
+  
 }
 .main__secondpart_image-menu-element:hover {
   color: #E3B873;
   padding-bottom: 7px;
   border-bottom: solid 1px #E3B873;
 }
+.main__secondpart_info-data_ring_button_0, 
+.main__secondpart_info-data_ring_button_1,
+.main__secondpart_info-data_ring_button_2,
+.main__secondpart_info-data_arrow_right,
+.main__secondpart_info-data_arrow_left {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 376px) and (max-width: 2500px) {
   .main__secondpart_image-mobile-twochair {
     display: none;
   }
 }
 @media screen and (max-width: 375px) {
-  .main__secondpart_image-menu, .main__secondpart_image-home-large-twochair, .main__secondpart_info-data_icon {
+  .main__secondpart_image-menu, .main__secondpart_image, .main__secondpart_info-data_icon {
     display: none;
   }
   .main__secondpart_image-mobile-twochair {
