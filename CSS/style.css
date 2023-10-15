@@ -156,21 +156,28 @@ h1 {
   font-weight: 400;
   color: #E3B873;
   text-transform: uppercase;
-  width: 220px;
+  width: 270px;
   height: 66px;
   margin-top: 50px;
   letter-spacing: -7%;
+  position: relative;
   @media screen and (max-width: 375px) {
     font-size: 22px;
     text-align: center;
     margin: 0 auto;
   }
 }
-/* .main__secondpart_info-header_stripe {
-  width: 92px;
-  height: 1px;
-  background-color: #E3B873;
-} */
+@media screen and (min-width:376px) {
+  .main__secondpart_info-header::after {
+    content: "";
+    width: 92px;
+    height: 1px;
+    background-color: #E3B873;
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+    }
+  }
 .main__secondpart_info-text {
   font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
@@ -195,6 +202,7 @@ h1 {
   height: 160px;
   gap: 50px;
   @media screen and (max-width: 375px) {
+    margin-top: 70px;
     width: 100%;
   }
 }
@@ -208,6 +216,7 @@ h1 {
   margin-bottom: 9px;
   @media screen and (max-width: 375px) {
     font-size: 13px;
+    width: 130px;
   }
 }
 .main__secondpart_info-data_element {
@@ -224,7 +233,23 @@ h1 {
   }
 }
 .main__secondpart_info-data_icon {
-  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 205.683px;
+  height: 13.276px;
+}
+.main__secondpart_info-data_ring_button_0,
+.main__secondpart_info-data_ring_button_1,
+.main__secondpart_info-data_ring_button_2 {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+}
+.main__secondpart_info-data_ring_button_0 {
+  background-color: rgba(255, 255, 255);
 }
 .main__secondpart_image-menu {
   margin-bottom: 45px;
@@ -254,7 +279,7 @@ h1 {
 }
 
 @media screen and (min-width: 376px) and (max-width: 2500px) {
-  .main__secondpart_image-mobile-twochair {
+  .main__secondpart_image-mobile {
     display: none;
   }
 }
@@ -262,9 +287,29 @@ h1 {
   .main__secondpart_image-menu, .main__secondpart_image, .main__secondpart_info-data_icon {
     display: none;
   }
-  .main__secondpart_image-mobile-twochair {
+  .main__secondpart_image-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .main__secondpart_image_img {
     object-fit: cover;
-    width: 100%;
+    width: 340px;
+    position: absolute;
+  }
+  .main__secondpart_image-mobile_button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background-color: #E3B873;
+    position: relative;
+    margin: 14px;
+  }
+  .main__secondpart_image-mobile_button:active {
+    transform: translate(2px, 4px);
   }
 }
 h3 {

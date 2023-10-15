@@ -19,7 +19,7 @@ time: "3 months"
 ]
 
 let index = 0;
-const img  = document.querySelector(".main__secondpart_image_img");
+const img  = document.querySelectorAll(".main__secondpart_image_img");
 const city = document.querySelector(".main__secondpart_info-data_element_city");
 const area = document.querySelector(".main__secondpart_info-data_element_area");
 const time = document.querySelector(".main__secondpart_info-data_element_time");
@@ -32,32 +32,36 @@ const menuElement_1 = document.querySelector(".main__secondpart_image-menu-eleme
 const menuElement_2 = document.querySelector(".main__secondpart_image-menu-element_2");
 
 function funcClick(i) {
-    img.src        = completedProjects[i].img;
+    
+    for (let y=0; y < img.length; y++) {
+        img[y].src = completedProjects[i].img;
+    }
+    
     city.innerText = completedProjects[i].city;
     area.innerText = completedProjects[i].area;
     time.innerText = completedProjects[i].time;
     
     switch (i) {
         case 0:
-            ringButton_0.style.fillOpacity = "1";
-            ringButton_1.style.fillOpacity = "0.3";
-            ringButton_2.style.fillOpacity = "0.3";
+            ringButton_0.style.backgroundColor = "rgba(255, 255, 255)";
+            ringButton_1.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            ringButton_2.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
             menuElement_0.style.color = "#E3B873";
             menuElement_1.style.color = "rgba(255, 255, 255, 0.3)";
             menuElement_2.style.color = "rgba(255, 255, 255, 0.3)";
-            break;                                      //вопрос: без break работало не правильно. заходило во все case
+            break;  
         case 1:
-            ringButton_0.style.fillOpacity = "0.3";
-            ringButton_1.style.fillOpacity = "1";
-            ringButton_2.style.fillOpacity = "0.3";
+            ringButton_0.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            ringButton_1.style.backgroundColor = "rgba(255, 255, 255)";
+            ringButton_2.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
             menuElement_0.style.color = "rgba(255, 255, 255, 0.3)";
             menuElement_1.style.color = "#E3B873";
             menuElement_2.style.color = "rgba(255, 255, 255, 0.3)";
             break;
         case 2:
-            ringButton_0.style.fillOpacity = "0.3";
-            ringButton_1.style.fillOpacity = "0.3";
-            ringButton_2.style.fillOpacity = "1";
+            ringButton_0.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            ringButton_1.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            ringButton_2.style.backgroundColor = "rgba(255, 255, 255)";
             menuElement_0.style.color = "rgba(255, 255, 255, 0.3)";
             menuElement_1.style.color = "rgba(255, 255, 255, 0.3)";
             menuElement_2.style.color = "#E3B873";
@@ -65,15 +69,21 @@ function funcClick(i) {
     }
     return index = i;
 }    
-
 const prev = document.querySelectorAll(".main__secondpart_info-data_arrow_left");
 const next = document.querySelectorAll(".main__secondpart_info-data_arrow_right");
 
-prev[0].addEventListener('click', () => {           //вопрос: как тут обратиться ко всем элементам массива куда записались все элементы document.querySelectorAll
-    index = (index > 0) ? index - 1 : 2;
-    funcClick(index);
+prev.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : completedProjects.length-1;
+        funcClick(index);
+    })
 })
-next[0].addEventListener('click', () => {
-    index = (index < 2) ? index + 1 : 0;
-    funcClick(index);
+
+next.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        index = (index < completedProjects.length-1) ? index + 1 : 0;
+        funcClick(index);
+    })
 })
+
+
